@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Weather App</title>
+</head>
+
+<body>
+    <section class="flex  items-center justify-center flex-col m-2 hanken-grotesk">
+        <form id="weatherForm" class="m-2">
+            <input type="text" id="cityInput" placeholder="Search City"
+                class="focus:outline-none focus:ring focus:border-blue-300 rounded-full p-1 border border-blue-200 md:min-w-[400px]">
+            <br>
+            <button class="block m-auto  bg-blue-600 rounded-full p-2 text-white hover:bg-blue-500 mt-2 font-bold ">Get
+                Weather</button>
+        </form>
+        <div
+            class="hidden relative card .shadow-2xl flex justify-center items-center flex-col bg-red-100 rounded-xl p-2 mt-5 min-w-[250px] md:min-w-[400px] min-h-[300px] text-center bg-gradient-to-b from-blue-400 via-red-300 to-pink-300">
+            <h1 id="cityDisplay" class="hanken-grotesk text-3xl bold font-bold text-gray-700 m-4"></h1>
+            <p id="tempDisplay" class="m-2 text-gray-700 text-2xl"></p>
+            <p id="emojiDisplay" class="m-2 text-gray-700  text-5xl"></p>
+            <p id="feelsDisplay" class="m-2 text-gray-700 text-lg"></p>
+            <p id="humididtyDisplay" class="m-2 mt-3 text-gray-700 text-lg"></p>
+            <p id="descDisplay" class="m-2 text-gray-700 text-lg"></p>
+        </div>
+    </section>
+    <div id="loader" class="absolute inset-0 flex items-center justify-center bg-white bg-opacity-60 z-50 hidden">
+        <div class="w-10 h-10 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+    </div>
+
+
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
